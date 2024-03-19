@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center; 
+        }
+        h1{
+            text-transform: uppercase;
+            color: rgb(90, 84, 84);
+            text-align: center;
+
+        }
+        #calculator{
+            border: 2px solid rgb(162, 160, 160);
+            background-color: rgb(83, 92, 84);
+            width: 300px;
+            height: 600px;
+            /* margin-top: 2%; */
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   
+        }
+        #display_cal{
+            background-color: rgb(102, 103, 107);
+            width: 260px;
+            height: 60px;
+            border: 5px solid rgb(162, 160, 160);
+            margin: 6% 4%;
+            border-radius: 15px;
+            font-size: 35px;
+        }
+        .button_container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .button_class{
+            color: black;
+            background-color: rgb(85, 87, 83);
+            font-size: 25px;
+            font-weight: 800;
+            width: 27%;
+            height: 70px;
+            margin: 5px;
+            border: 2px solid rgb(162, 160, 160);
+            border-radius: 15px;
+            
+        }
+        #equalTo{
+            width:170px;
+        }
+    </style>
+</head>
+<body>
+    <div><h1>calculator</h1></div>
+    <div id="calculator">
+        <input id="display_cal" type="text" readonly>
+
+        <div class="button_container">
+
+            <button class="button_class" 
+            onclick="current = ''; document.querySelector('#display_cal').value=current;">C</button>
+
+            <button class="button_class"
+            onclick="current = current+'1'; document.querySelector('#display_cal').value=current;">1</button>
+
+            <button class="button_class"
+            onclick="current = current+'2'; document.querySelector('#display_cal').value=current;">2</button>
+
+            <button class="button_class"
+            onclick="current = current+'+'; document.querySelector('#display_cal').value=current;">+</button>
+
+            <button class="button_class"
+            onclick="current = current+'3'; document.querySelector('#display_cal').value=current;">3</button>
+
+            <button class="button_class"
+            onclick="current = current+'4'; document.querySelector('#display_cal').value=current;">4</button>
+
+            <button class="button_class"
+            onclick="current = current+'-'; document.querySelector('#display_cal').value=current;">-</button>
+
+            <button class="button_class"
+            onclick="current = current+'5'; document.querySelector('#display_cal').value=current;">5</button>
+
+            <button class="button_class" 
+            onclick="current = current+'6'; document.querySelector('#display_cal').value=current;">6</button>
+
+            <button class="button_class"
+            onclick="current = current+'*'; document.querySelector('#display_cal').value=current;">x</button>
+
+            <button class="button_class"
+            onclick="current = current+'7'; document.querySelector('#display_cal').value=current;">7</button>
+
+            <button class="button_class"
+            onclick="current = current+'8'; document.querySelector('#display_cal').value=current;">8</button>
+
+            <button class="button_class"
+            onclick="current = current+'/'; document.querySelector('#display_cal').value=current;">/</button>
+
+            <button class="button_class"
+            onclick="current = current+'9'; document.querySelector('#display_cal').value=current;">9</button>
+
+            <button class="button_class"
+            onclick="current = current+'0'; document.querySelector('#display_cal').value=current;">0</button>
+
+            <button class="button_class"
+            onclick="current = current+'1'; document.querySelector('#display_cal').value=current;">.</button>
+
+            <button id="equalTo"class="button_class"
+            onclick="let result=eval(current);
+            current = result;
+            document.querySelector('#display_cal').value=current;">=</button>
+
+        </div>
+    </div>
+    <script>
+        let current='';
+        // document.querySelector('#display_cal').value=current;
+    </script>
+</body>
+</html>
